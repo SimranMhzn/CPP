@@ -23,6 +23,7 @@ int main()
     int result=0;
     obj.setradius();
     result=calculateArea(obj);
+    cout<<"The radius of circle is "<<result;
     return 0;
 }
 
