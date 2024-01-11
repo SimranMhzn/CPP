@@ -18,7 +18,7 @@ using namespace std;
  			cout<<endl<<"There are "<<total<<" books available now.";
 		}
  };
- int Book::=50;
+ int Book::total=50;
 int main()
 {
 	Book obj;
