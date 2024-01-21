@@ -26,6 +26,7 @@ class A{
 			cout<<"Copy constructor called!"<<endl;
 			cout<<"The value from copy constructor is "<<num1;
 		}
+		~A();
 };
 int main()
 {
