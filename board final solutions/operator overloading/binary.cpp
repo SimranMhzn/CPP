@@ -1,38 +1,35 @@
-//types of constructor
+//binary operator overloading example to add complex numbers
 #include<iostream>
 using namespace std;
-class A{
-	int num1;
-	int num2;
+class Complex{
+	int real=0;
+	int imag=0;
 	public:
-		A()
+		void setdata()
 		{
-			num1=5;
-			cout<<"Default constructor called!"<<endl;
-			cout<<"The value from default constructor is "<<num1;
+			cout<<"Enter real part: "<<endl;
+			cin>>real;
+			cout<<"Enter imag part: "<<endl;
+			cin>>imag;
 		}
-		A(int a)
+		Complex operator +(Complex &obj)
 		{
-			num2=a;
-			cout<<"Parameterized constructor called!"<<endl;
-			cout<<"The value from parameterized constructor is "<<num2;
-		}
-		A (A &obj)
-		{
-			num1=obj.num1+50;
+			Complex temp;
+			temp.real=real+obj.real;
+			temp.imag=imag+obj.imag;
+			return temp;
 		}
 		void display()
 		{
-			cout<<"Copy constructor called!"<<endl;
-			cout<<"The value from copy constructor is "<<num1;
+			cout<<"The complex number is "<<real<<" + "<<imag<<"i."<<endl;
 		}
-		~A();
 };
 int main()
 {
-	A obj1;
-	A obj2(10);
-	A obj3=obj1;
-	obj3.display();
+	Complex o1,o2,result;
+	o1.setdata();
+	o2.setdata();
+	result=o1+o2;
+	result.display();
 	return 0;
 }
