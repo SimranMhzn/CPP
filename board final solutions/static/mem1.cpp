@@ -43,23 +43,19 @@ int main()
 		int result;
 		result=obj.add();
 	}
-	else if(choice==2)
+	if(choice==2)
 	{
 		int result;
 		result=obj.sub();
 	}
-	else if(choice==3)
+	if(choice==3)
 	{
 		int result;
 		result=obj.mul();
 	}
-	else if(choice==4)
+	if(choice==4)
 	{
 		int result;
 		result=obj.div();
-	}
-	else
-	{
-		exit(0);
 	}
 }
